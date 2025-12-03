@@ -27,3 +27,6 @@ El proyecto se encuentra en la **Fase 1: Análisis y Configuración**. Se ha def
 - **Contenerización:** Docker y Docker Compose
 - **Control de Versiones:** Git y GitHub
 
+[Tablero del proyecto en Trello](https://trello.com/b/x1ayTDvY/proyecto-webtejadoscayero)
+
+
