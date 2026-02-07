@@ -1,0 +1,43 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+    layout:
+        label: "Layout"
+        type: relation
+        emptyOption: "-- No layout --"
+
+    code:
+        label: "Code"
+        comment: "Unique code used to refer to this template"
+        span: left
+        context: create
+
+    subject@create:
+        label: "Subject"
+        comment: "Email message subject"
+        span: right
+
+    subject@update:
+        label: "Subject"
+
+    description:
+        label: "Description"
+        type: textarea
+        size: tiny
+
+secondaryTabs:
+    fields:
+        content_html:
+            type: markdown
+            size: giant
+            tab: "HTML"
+            safe: true
+            stretch: true
+
+        content_text:
+            type: textarea
+            size: giant
+            tab: "Plaintext"
+            stretch: true

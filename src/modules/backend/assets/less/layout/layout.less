@@ -1,0 +1,126 @@
+:root, [data-bs-theme="light"] {
+    --oc-page-size-outer-bg: var(--bs-tertiary-bg);
+    --oc-page-size-inner-bg: var(--bs-body-bg);
+    --oc-page-size-border: var(--bs-border-color);
+}
+
+[data-bs-theme="dark"] {
+    --oc-page-size-outer-bg: var(--bs-tertiary-bg);
+    --oc-page-size-inner-bg: var(--bs-body-bg);
+    --oc-page-size-border: var(--bs-border-color);
+}
+
+//
+// Common layout elements
+// --------------------------------------------------
+
+@media (pointer: fine) {
+    body.drag * {
+        cursor: grab !important;
+    }
+}
+
+// Used by sortable plugin
+body.dragging, body.dragging * {
+    cursor: move !important;
+}
+
+body.loading, body.loading * {
+    cursor: wait !important;
+}
+
+body.no-select {
+    user-select: none;
+    cursor: default !important;
+}
+
+//
+// Layout canvas
+//
+
+html,
+body {
+    height: 100%;
+    font-size: 14px;
+    line-height: 1.42857143;
+    /* The html and body elements cannot have any padding or margin. */
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body.has-page-size {
+    background: var(--oc-page-size-outer-bg);
+    #layout-body {
+        background: var(--oc-page-size-inner-bg);
+    }
+    &.has-sidenav-tree {
+        #layout-body {
+            border-right: 1px solid var(--oc-page-size-border);
+        }
+    }
+}
+
+#layout-canvas {
+    min-height: 100%;
+    height: 100%;
+}
+
+#layout-body {
+    // Stops content escaping the flex box
+    width: 0;
+}
+
+.layout-container, .padded-container {
+    padding: @padding-standard @padding-standard 0 @padding-standard;
+
+    // Container to sit flush to the element above
+    .container-flush {
+        padding-top: 0;
+    }
+
+    .padded-container-inset {
+        margin-left: -@padding-standard;
+        margin-right: -@padding-standard;
+    }
+}
+
+.whiteboard {
+    background: white;
+}
+
+[data-bs-theme="dark"] .whiteboard {
+    background: #181a1e;
+}
+
+.layout-fill-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+//
+// Calculated fixed width
+//
+
+[data-calculate-width] {
+    > form, > div {
+        display: inline-block;
+    }
+}
+
+//
+// Layout styles
+//
+
+body.compact-container {
+    .layout-container { padding: 0 !important; }
+}
+
+body.slim-container {
+    .layout-container { padding-left: 0 !important; padding-right: 0 !important; }
+}

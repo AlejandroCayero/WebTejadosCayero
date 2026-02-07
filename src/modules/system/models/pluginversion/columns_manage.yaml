@@ -1,0 +1,23 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+    code:
+        label: Code
+        type: partial
+        path: column_code
+
+    version:
+        label: Version
+        sortable: false
+
+    created_at:
+        label: Installed
+        type: timetense
+
+    is_enabled:
+        label: Enabled
+        type: partial
+        path: column_is_enabled
+        sortable: false

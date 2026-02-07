@@ -1,0 +1,10 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+    message_formatted:
+        type: partial
+        path: field_message
+        containerAttributes:
+            data-control: exception-beautifier

@@ -1,0 +1,29 @@
+
+.oc-dashboard {
+    --oc-color-widget-skeleton:      var(--bs-secondary-color);
+    --oc-opacity-widget-skeleton:    0.5;
+    --oc-color-control-border:       #bdc3c7;
+    --oc-dashboard-max-row-widgets:  20;
+    --oc-dashboard-gap-size:         20px;
+    --oc-widget-body-padding:        17px;
+}
+
+@import "_daterangepicker.css";
+@import "_report-container.css";
+@import "_toolbar.css";
+@import "_row.css";
+@import "_widget.css";
+@import "_widget-indicator.css";
+@import "_widget-chart.css";
+@import "_widget-table.css";
+@import "_widget-notice.css";
+@import "_widget-static.css";
+@import "_widget-sectiontitle.css";
+
+body.reportwidget-resize {
+    * {
+        user-select: none;
+    }
+
+    cursor: col-resize;
+}

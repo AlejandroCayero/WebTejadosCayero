@@ -1,0 +1,12 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+    url:
+        label: URL
+
+    referer:
+        label: Referers
+        type: partial
+        path: referer_field

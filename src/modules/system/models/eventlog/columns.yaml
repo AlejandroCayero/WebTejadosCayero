@@ -1,0 +1,22 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: "ID"
+        searchable: true
+        width: 75px
+
+    created_at:
+        label: "Date & Time"
+        searchable: true
+        width: 160px
+        type: timetense
+
+    message:
+        label: "Message"
+        searchable: true
+        type: partial
+        path: message_column
+        cssClass: column-break-word

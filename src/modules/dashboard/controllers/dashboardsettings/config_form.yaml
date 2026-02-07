@@ -1,0 +1,15 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: "Dashboard Settings"
+
+# Fields are defined by extension
+form: ~/modules/dashboard/models/dashboardsetting/fields.yaml
+
+# Model Class name
+modelClass: Dashboard\Models\DashboardSetting
+
+# Default redirect location
+defaultRedirect: system/settings

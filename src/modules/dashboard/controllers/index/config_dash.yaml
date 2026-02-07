@@ -1,0 +1,157 @@
+# ===================================
+#  Dash Behavior Config
+# ===================================
+
+system:
+    name: System Dashboard
+    icon: ph ph-globe
+    # canCreateAndEdit: true
+    # showInterval: true
+    reports:
+        cms_information:
+            row: 2
+            width: 4
+            type: indicator
+            icon: ph ph-power
+            title: Manage Status
+            linkText: Manage Status
+            dimension: indicator@cms_information
+            dataSource: Dashboard\Classes\CmsStatusDataSource
+
+        version_information:
+            row: 2
+            width: 4
+            type: indicator
+            icon: ph ph-package
+            title: System Build
+            linkText: View Available Updates
+            dimension: indicator@version_information
+            dataSource: Dashboard\Classes\SystemReportDataSource
+
+        system_issues:
+            row: 2
+            width: 4
+            type: indicator
+            icon: ph ph-gear-fine
+            title: Configuration
+            linkText: View Issues
+            dimension: indicator@system_issues
+            dataSource: Dashboard\Classes\SystemReportDataSource
+
+        event_log:
+            row: 2
+            width: 4
+            type: indicator
+            icon: ph ph-bell-ringing
+            title: Event Log
+            linkText: View Event Log
+            dimension: indicator@event_log
+            dataSource: Dashboard\Classes\SystemReportDataSource
+
+        request_log:
+            row: 2
+            width: 4
+            type: indicator
+            icon: ph ph-signpost
+            title: Bad requests
+            linkText: Request Log
+            dimension: indicator@request_log
+            dataSource: Dashboard\Classes\SystemReportDataSource
+
+        traffic_title:
+            row: 1
+            width: 20
+            type: section-title
+            title: Traffic
+            showInterval: true
+
+        visitor_chart:
+            row: 3
+            width: 20
+            type: chart
+            chartType: line
+            dimension: date
+            sortOrder: asc
+            sortBy: oc_dimension
+            dataSource: Dashboard\Classes\CmsReportDataSource
+            metrics:
+                pageviews:
+                    color: "#84cc16"
+                    displayTotals: true
+                unique_visitors:
+                    color: "#0ea5e9"
+                    displayTotals: true
+
+        top_pages_table:
+            row: 4
+            width: 10
+            type: table
+            title: Top Pages
+            limit: 10
+            dimension: page_path
+            sortOrder: desc
+            sortBy: oc_metric-pageviews
+            dataSource: Dashboard\Classes\CmsReportDataSource
+            metrics:
+                pageviews:
+                    color: "#84cc16"
+                    displayTotals: true
+                    displayRelativeBar: true
+                unique_visitors:
+                    color: "#06b6d4"
+                    displayTotals: true
+                    displayRelativeBar: true
+
+        top_referrals_table:
+            row: 4
+            width: 10
+            type: table
+            title: Top Referral Domains
+            limit: 10
+            dimension: referral_domain
+            sortOrder: desc
+            sortBy: oc_metric-pageviews
+            dataSource: Dashboard\Classes\CmsReportDataSource
+            metrics:
+                pageviews:
+                    color: "#84cc16"
+                    displayTotals: true
+                    displayRelativeBar: true
+                unique_visitors:
+                    color: "#06b6d4"
+                    displayTotals: true
+                    displayRelativeBar: true
+
+# classic:
+#     name: Classic Dashboard
+#     icon: ph ph-airplane
+#     reports:
+#         welcome:
+#             row: 1
+#             width: 20
+#             title: Welcome
+#             type: Backend\ReportWidgets\Welcome
+
+#         system_status:
+#             row: 2
+#             width: 12
+#             title: System Status
+#             type: System\ReportWidgets\Status
+
+#         active_theme:
+#             row: 2
+#             width: 8
+#             title: Website
+#             type: Cms\ReportWidgets\ActiveTheme
+
+#         my_custom_vue_widget:
+#             title: My Custom Vue Widget
+#             row: 3
+#             width: 20
+#             type: October\Test\VueComponents\MyCustomWidget
+
+#         my_custom_widget:
+#             title: My Custom Widget
+#             row: 4
+#             width: 20
+#             type: October\Test\ReportWidgets\ClearCache

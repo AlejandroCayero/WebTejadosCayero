@@ -1,0 +1,24 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+tabs:
+    defaultTab: "Logging"
+    fields:
+        log_requests:
+            label: "Log Bad Requests"
+            span: auto
+            type: switch
+            comment: "Browser requests that may require attention, such as 404 errors."
+
+        log_theme:
+            label: "Log Theme Changes"
+            span: auto
+            type: switch
+            comment: "When a change is made to the theme using the backend."
+
+        log_events:
+            label: "Log System Events"
+            span: auto
+            type: switch
+            comment: "Store system events in the database in addition to the file-based log."

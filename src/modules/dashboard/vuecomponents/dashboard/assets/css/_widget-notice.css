@@ -1,0 +1,10 @@
+.oc-dashboard .dashboard-report-widget .dashboard-report-widget-notice {
+    background-color: var(--oc-popup-bg);
+    p {
+        margin-bottom: 0;
+    }
+
+    h3:last-child {
+        margin-bottom: 0;
+    }
+}

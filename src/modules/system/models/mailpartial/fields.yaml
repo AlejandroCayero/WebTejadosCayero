@@ -1,0 +1,32 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+    code:
+        label: "Code"
+        comment: "Unique code used to refer to this template"
+        span: left
+        context: create
+
+    name@create:
+        label: "Name"
+        span: right
+
+    name@update:
+        label: "Name"
+
+secondaryTabs:
+    fields:
+        content_html:
+            type: codeeditor
+            size: giant
+            tab: "HTML"
+            language: html
+            stretch: true
+
+        content_text:
+            type: textarea
+            size: giant
+            tab: "Plaintext"
+            stretch: true

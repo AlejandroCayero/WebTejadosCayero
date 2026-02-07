@@ -1,0 +1,22 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+    code:
+        label: "Code"
+        searchable: true
+
+    subject:
+        label: "Subject"
+        searchable: true
+
+    description:
+        label: "Description"
+        searchable: true
+
+    layout:
+        label: "Layout"
+        relation: layout
+        select: name
+        sortable: false

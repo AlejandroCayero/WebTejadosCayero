@@ -1,0 +1,46 @@
+services:
+  # 1. SERVIDOR WEB (Nginx)
+  web:
+    image: nginx:alpine
+    container_name: tejados_nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./src:/var/www/html
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - app
+    networks:
+      - tejados-network
+
+  # 2. MOTOR PHP (La App)
+  app:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    container_name: tejados_php
+    volumes:
+      - ./src:/var/www/html
+    networks:
+      - tejados-network
+
+  # 3. BASE DE DATOS (MariaDB)
+  db:
+    image: mariadb:10.6
+    container_name: tejados_db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: tejados_db
+      MYSQL_USER: tejados
+      MYSQL_PASSWORD: tejados
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - tejados-network
+
+networks:
+  tejados-network:
+    driver: bridge
+
+volumes:
+  db_data:

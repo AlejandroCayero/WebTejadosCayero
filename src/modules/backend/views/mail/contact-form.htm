@@ -1,0 +1,23 @@
+subject = "Contact form submitted by: {{ email }}"
+layout = "system"
+description = "Notify the admins that a contact form was submitted"
+==
+Hello
+
+A website user has submitted the contact form via **{{ appName }}**.
+
+{% partial 'panel' body %}
+- First Name: {{ first_name }}
+- Last Name: {{ last_name }}
+- Email: {{ email }}
+{% endpartial %}
+
+Their message is below:
+
+{% partial 'subcopy' body %}
+    {{ comments }}
+{% endpartial %}
+
+{% partial 'button' url='mailto:'~email~'?subject=Contact form via '~appName body %}
+Reply via Email
+{% endpartial %}

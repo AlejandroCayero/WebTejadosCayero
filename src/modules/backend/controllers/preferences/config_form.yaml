@@ -1,0 +1,8 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: "Backend Preferences"
+form: ~/modules/backend/models/preference/fields.yaml
+modelClass: Backend\Models\Preference
+defaultRedirect: system/settings

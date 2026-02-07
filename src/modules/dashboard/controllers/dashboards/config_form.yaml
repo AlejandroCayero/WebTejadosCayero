@@ -1,0 +1,16 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Dashboard
+
+# Model Form Field configuration
+form: ~/modules/dashboard/models/dashboard/fields.yaml
+
+# Model Class name
+modelClass: Dashboard\Models\Dashboard
+
+# Form Design
+design:
+    displayMode: popup

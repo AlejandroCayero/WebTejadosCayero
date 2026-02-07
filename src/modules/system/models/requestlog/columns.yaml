@@ -1,0 +1,18 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+    status_code:
+        label: Status
+        searchable: true
+        width: 100px
+
+    url:
+        label: URL
+        searchable: true
+        cssClass: column-break-word
+
+    count:
+        label: Counter
+        width: 150px

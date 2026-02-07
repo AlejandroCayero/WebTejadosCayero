@@ -1,0 +1,12 @@
+url = "/with-placeholder"
+layout = "placeholder"
+==
+{% put test %}
+  BLOCK
+  {% default %}
+{% endput %}
+{% put second %}
+  SECOND BLOCK
+{% endput %}
+{% put third = 'THIRD VARIABLE' %}
+<p>Hey PAGE CONTENT</p>

@@ -1,0 +1,19 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: "Mail Branding"
+
+# Fields are defined by extension
+form: ~/modules/system/models/mailbrandsetting/fields.yaml
+
+# Model Class name
+modelClass: System\Models\MailBrandSetting
+
+# Default redirect location
+defaultRedirect: system/settings
+
+# Form Design
+design:
+    displayMode: sidebar

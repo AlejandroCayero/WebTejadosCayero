@@ -1,0 +1,28 @@
+/*
+// Variables
+// --------------------------------------------------*/
+
+:root {
+    --bs-body-font-family:      -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+    --oc-brand-primary:          var(--bs-primary);
+    --oc-brand-secondary:        var(--bs-secondary);
+    --oc-brand-success:          var(--bs-success);
+    --oc-brand-info:             var(--bs-info);
+    --oc-brand-warning:          var(--bs-warning);
+    --oc-brand-danger:           var(--bs-danger);
+    --oc-brand-light:            var(--bs-light);
+    --oc-brand-dark:             var(--bs-dark);
+
+    --oc-body-bg:                var(--bs-body-bg);
+    --oc-text-color:             var(--bs-body-color);
+    --oc-text-muted:             var(--bs-secondary-color);
+    --oc-link-color:             var(--bs-link-color);
+    --oc-link-hover-color:       var(--bs-link-hover-color);
+    --oc-heading-color:          var(--bs-heading-color);
+    --oc-emphasis-color:         var(--bs-emphasis-color);
+    --oc-border-color:           var(--bs-border-color);
+    --oc-popup-bg:               var(--bs-modal-bg);
+    --oc-popup-border:           1px solid rgba(149, 165, 166, 0.2);
+    --oc-backdrop-opacity:       var(--bs-backdrop-opacity);
+}

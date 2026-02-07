@@ -1,0 +1,301 @@
+html .control-settings-nav {
+    background: var(--oc-settings-bg);
+}
+
+body.has-settings-nav {
+    .control-settings-nav ul.top-level {
+        opacity: 1;
+    }
+}
+.control-settings-nav ul.top-level {
+    opacity: 0;
+}
+
+.control-settings-nav-container {
+    width: 300px;
+}
+
+.control-settings-nav {
+    width: 300px;
+    flex-shrink: 0;
+    border-right: 1px solid var(--oc-primary-border);
+
+    position: sticky;
+    top: 0;
+    height: calc(100vh - 70px);
+
+    &.is-full {
+        height: 100vh;
+    }
+
+    .input-clear-search {
+        display: none;
+    }
+
+    &.is-search-active {
+        .input-clear-search {
+            display: block;
+        }
+    }
+
+    .settings-nav-scroll-canvas {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .settings-search-toolbar-item {
+        display: block;
+        position: relative;
+        background: var(--oc-form-control-bg);
+
+        input.form-control {
+            border: none;
+            outline: none;
+            background: transparent;
+            border-radius: 0;
+            border-bottom: 1px solid var(--oc-primary-border);
+            padding-left: 3rem;
+            padding-right: 3rem;
+            height: 40px;
+        }
+
+        .input-icon-start, .input-icon-end {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.4rem;
+            margin-top: .1rem;
+        }
+        .input-icon-start {
+            left: 1rem;
+        }
+        .input-icon-end {
+            right: 1rem;
+        }
+        .input-decoration {
+            color: var(--bs-tertiary-color);
+        }
+        .input-clear-search {
+            text-decoration: none;
+            color: var(--bs-body-color);
+
+            &:hover {
+                color: var(--bs-secondary-color);
+            }
+        }
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    ul.top-level {
+        padding-bottom: 20px;
+    }
+
+    div.scrollbar-thumb {
+        background: rgba(0,0,0,.2) !important;
+    }
+
+    ul.top-level > li {
+        padding-top: 10px;
+
+        &[data-status=collapsed] {
+            > div.group {
+                h3 > span.group-collapse {
+                    transform: scaleY(-1) translate(0, -10px);
+                }
+            }
+
+            ul {
+                display: none;
+            }
+        }
+
+        > div.group {
+            /* This makes the group title stick to the top when scrolling
+            background: var(--oc-settings-bg);
+            position: relative;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            */
+
+            h3 {
+                user-select: none;
+                font-size: 1rem;
+                font-weight: 600;
+                padding: 9px 2px 10px 60px;
+                margin: 0;
+                position: relative;
+                cursor: pointer;
+
+                > span.group-icon {
+                    position: absolute;
+                    left: 15px;
+                    top: 4px;
+
+                    width: 30px;
+                    height: 30px;
+
+                    > i {
+                        font-size: 1.4rem;
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+
+                > span.group-collapse {
+                    display: block;
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    right: 20px;
+                    top: 7px;
+                    transform: scaleY(1);
+                    transition: all 0.1s ease;
+                    font-size: 16px;
+                }
+            }
+        }
+
+        > ul {
+            li {
+                padding: 1px 10px;
+                a {
+                    display: block;
+                    position: relative;
+                    padding: 5px 5px 3px 50px;
+                    text-decoration: none !important;
+                    border-radius: 6px;
+                    font-size: 1rem;
+
+                    span {
+                        display: block;
+                        line-height: 150%;
+
+                        &.header {
+                            margin-bottom: 3px;
+                        }
+                    }
+                }
+
+                a:hover,
+                &.active a {
+                    opacity: 1;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+/* Item Styling */
+
+.control-settings-nav ul.top-level > li {
+    > div.group h3 {
+        color: var(--oc-settings-color);
+
+        &:before {
+            color: var(--oc-settings-color);
+        }
+    }
+}
+
+.control-settings-nav ul.top-level > li > ul li {
+    a {
+        color: var(--oc-settings-color);
+
+        span.header {
+            color: var(--oc-settings-color);
+        }
+    }
+
+    a:hover {
+        background: var(--oc-settings-hover-bg);
+        color: var(--oc-settings-color);
+
+        span.header {
+            color: var(--oc-settings-color);
+        }
+    }
+
+    &.active a {
+        color: var(--oc-settings-active-color);
+        background: var(--oc-settings-active-bg);
+
+        span.header {
+            color: var(--oc-settings-active-color);
+        }
+    }
+}
+
+.control-settings-nav {
+    .control-scrollbar.vertical > div.scrollbar-scrollbar {
+        margin-right: 0;
+
+        div.scrollbar-thumb {
+            opacity: 0;
+            transition: opacity 0.1s ease-out;
+            background: rgba(0,0,0,.2);
+        }
+    }
+
+    &:hover {
+        .control-scrollbar.vertical > div.scrollbar-scrollbar {
+            div.scrollbar-thumb {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+body.drag-noselect {
+    .control-settings-nav {
+        .control-scrollbar.vertical > div.scrollbar-scrollbar {
+            div.scrollbar-thumb {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+/* Expanded */
+@media (max-width: 767px) {
+    body.settings-nav-expanded {
+        #layout-body {
+            display: none !important;
+        }
+
+        .control-settings-nav-container {
+            width: 100%;
+        }
+
+        .control-settings-nav {
+            display: block !important;
+            margin: 0 auto;
+            border-right: none;
+            border-left: none;
+            flex-shrink: inherit;
+            width: 100%;
+        }
+    }
+
+    body:not(.settings-nav-expanded) {
+        .control-settings-nav-container,
+        .control-settings-nav {
+            display: none;
+        }
+    }
+}
+
+html body.main-menu-left .control-settings-nav {
+    height: 100vh;
+}

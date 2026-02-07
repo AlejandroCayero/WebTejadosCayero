@@ -1,0 +1,24 @@
+columns:
+    name:
+        label: Name
+
+    code:
+        label: Code
+        sortable: false
+
+    is_global:
+        label: Global
+        type: switch
+
+    created_by_name:
+        label: Created By
+        relationWith: created_user
+
+    open_link:
+        label: Open Link
+        shortLabel: ''
+        sortable: false
+        type: linkage
+        linkText: View
+        linkUrl: dashboard/index/:code
+        align: right
