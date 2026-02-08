@@ -34,13 +34,10 @@ services:
       MYSQL_USER: tejados
       MYSQL_PASSWORD: tejados
     volumes:
-      - db_data:/var/lib/mysql
+      - ./mysql_data:/var/lib/mysql
     networks:
       - tejados-network
 
 networks:
   tejados-network:
     driver: bridge
-
-volumes:
-  db_data:

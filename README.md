@@ -8,7 +8,7 @@ El objetivo principal es dotar a la empresa de una presencia online profesional 
 
 ## Estado Actual del Proyecto
 
-El proyecto se encuentra en la **Fase 1: Análisis y Configuración**. Se ha definido el alcance inicial, se está configurando el entorno de trabajo y se está diseñando la interfaz inicial (wireframes).
+El proyecto se encuentra en la **Fase 1: Configuración y Desarrollo Inicial**. Se ha establecido un entorno de trabajo robusto y se ha implementado la base tecnológica para el desarrollo frontend.
 
 ## Objetivos Principales
 
@@ -20,13 +20,43 @@ El proyecto se encuentra en la **Fase 1: Análisis y Configuración**. Se ha def
 
 ## Tecnologías Utilizadas
 
-- **Backend:** PHP 8, October CMS (basado en Laravel)
-- **Frontend:** HTML5, CSS3, JavaScript
-- **Base de Datos:** MySQL
-- **Servidor Web:** Nginx
-- **Contenerización:** Docker y Docker Compose
+- **Backend:** PHP 8.2-FPM (personalizado con Dockerfile), October CMS v3 (basado en Laravel)
+- **Frontend:** HTML5, CSS3, JavaScript (preparado para integrar frameworks modernos)
+- **Base de Datos:** MariaDB 10.6 (gestionada con volúmenes persistentes)
+- **Servidor Web:** Nginx (Alpine)
+- **Contenerización:** Docker y Docker Compose (para orquestación de servicios)
 - **Control de Versiones:** Git y GitHub
 
-[Tablero del proyecto en Trello](https://trello.com/b/x1ayTDvY/proyecto-webtejadoscayero)
+## Puesta en Marcha (Entorno de Desarrollo Local)
 
+Para arrancar el proyecto en un entorno local, siga los siguientes pasos:
 
+1.  **Requisitos:**
+    *   Docker Desktop
+    *   WSL2 (Windows Subsystem for Linux)
+
+2.  **Clonar el repositorio:**
+    Abra su terminal WSL y ejecute:
+    `git clone https://github.com/AlejandroCayero/WebTejadosCayero.git`
+
+3.  **Navegar al directorio del proyecto y levantar los contenedores:**
+    `cd WebTejadosCayero`
+    `docker compose up -d`
+
+4.  **Acceder a la aplicación:**
+    Una vez los contenedores estén levantados, podrá acceder a la plataforma desde su navegador:
+    *   **Página Web:** [http://localhost](http://localhost)
+    *   **Panel de Administración:** [http://localhost/backend](http://localhost/backend)
+
+## Estructura de Directorios
+
+-   **/docker**: Contiene los archivos de configuración específicos para los servicios de Docker (Nginx y Dockerfile de PHP).
+-   **/src**: Este directorio aloja el código fuente completo de la aplicación October CMS, incluyendo el tema `tejados-cayero` en desarrollo.
+-   **/mysql_data**: Carpeta dedicada a la persistencia de los datos de la base de datos MariaDB, asegurando que la información no se pierda al reiniciar el entorno.
+-   **docker-compose.yml**: El archivo principal que define la arquitectura de servicios y su interconexión.
+
+## Gestión y Planificación del Proyecto
+
+El seguimiento de tareas y la planificación del proyecto se realizan mediante el tablero de Trello del proyecto.
+
+[**Ver Tablero del Proyecto en Trello**](https://trello.com/b/x1ayTDvY/proyecto-webtejadoscayero)
