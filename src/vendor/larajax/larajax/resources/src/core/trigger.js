@@ -117,6 +117,7 @@ export class Trigger
         if (tag === 'button') return 'click';
         if (tag === 'select') return 'change';
         if (type === 'checkbox' || type === 'radio' || type === 'file') return 'change';
+        if (type === 'date' || type === 'datetime-local' || type === 'time' || type === 'month' || type === 'week' || type === 'color' || type === 'range') return 'change';
         if (tag === 'input' && (type === 'submit' || type === 'button')) return 'click';
         if (tag === 'input') return 'click';
 
@@ -151,11 +152,6 @@ export class Trigger
      * Handle the trigger event
      */
     handleEvent(event) {
-        // User already prevented this event, respect it
-        if (event && event.defaultPrevented) {
-            return;
-        }
-
         // Element removed from DOM, ignore
         if (!this.isConnected()) {
             return;

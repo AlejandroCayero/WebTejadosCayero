@@ -1,0 +1,188 @@
+/* Variables de color según la web de referencia */
+:root {
+    --primary-orange: #d66a4a;
+    --primary-green: #3e8e75;
+    --dark-blue: #2c3e50;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif; /* Fuente limpia profesional */
+}
+
+/* Header Transparente */
+.main-header {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1050;
+    padding: 20px 0;
+    background: transparent; 
+    transition: all 0.4s ease; /* Para que el cambio a negro sea suave */
+}
+
+/* Refuerzo para páginas estáticas: negro inmediato y sin degradados */
+.main-header.static-page {
+    background-color: #000000 !important;
+    position: fixed;
+    padding: 10px 0;
+}
+
+/* Espacio superior para páginas internas (compensación de header fijo) */
+.page-content-offset {
+    padding-top: 140px; /* Este es el margen que separa el título del techo */
+    padding-bottom: 60px; /* Un poco de margen abajo también para que respire */
+}
+
+/* Ajuste para móviles: el header suele ser más pequeño, bajamos el margen */
+@media (max-width: 768px) {
+    .page-content-offset {
+        padding-top: 100px;
+    }
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--dark-blue);
+    margin-bottom: 10px;
+}
+
+.header-scrolled {
+    background: rgba(0, 0, 0, 0.9) !important; /* Negro casi total al bajar */
+    backdrop-filter: blur(10px); /* Efecto cristal esmerilado */
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: 500; /* Un poco más de grosor */
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    letter-spacing: 1px; /* Espaciado entre letras elegante */
+}
+
+
+.btn-orange {
+    background-color: var(--primary-orange);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+
+.btn-orange:hover {
+    background-color: #d13100;
+    color: white;
+}
+
+.hero-static h1 {
+    font-size: 4rem; /* Tamaño grande impacto */
+    font-weight: 900; /* Máximo grosor */
+    text-shadow: 2px 2px 15px rgba(0,0,0,0.6); /* Sombra para que se lea sobre cualquier foto */
+}
+
+/* 1. HERO SUPERIOR */
+.hero-static {
+    height: 90vh;
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* 2. SECCIÓN DE TEXTO (TRAYECTORIA) */
+.trayectoria-mensaje {
+    background-color: #ffffff;
+    padding: 80px 0; /* Espacio generoso arriba y abajo */
+    text-align: center;
+}
+
+.trayectoria-mensaje h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.trayectoria-mensaje .sub-linea {
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-orange);
+    margin: 20px auto 0;
+}
+
+/* 3. CARRUSEL INFERIOR */
+.carousel-full-clean {
+    height: 700px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-full-clean .carousel-item, 
+.carousel-full-clean .carousel-item img {
+    height: 700px;
+    width: 100%;
+    object-fit: cover; /* Evita que la imagen se estire */
+}
+
+/* Estilos para los bloques de servicios Tectum, Uralita, etc */
+.service-block {
+    padding: 100px 0; /* Espacio entre servicios */
+}
+
+.service-image img {
+    width: 100%;
+    border-radius: 20px; /* Bordes redondeados como tu referencia */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+.service-text h3 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--primary-green);
+    margin-bottom: 20px;
+}
+
+.service-text p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Botón "Ver más" redondeado azul/celeste como tu referencia */
+.btn-ver-mas {
+    background-color: #29abe2; /* Color azul de la imagen de referencia */
+    color: white;
+    padding: 12px 35px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.btn-ver-mas:hover {
+    background-color: #1b75bb;
+    color: white;
+    transform: translateY(-3px); /* Pequeño salto al pasar el ratón */
+}
+
+.service-image img {
+    height: 450px; /* Forzamos una altura fija para que todas las fotos de servicios sean iguales */
+    object-fit: cover; /* Evita que se deformen al forzar la altura */
+    width: 100%;
+}
+
+/* Footer */
+.main-footer {
+    background-color: #1a1a1a;
+    color: #ccc;
+    padding: 60px 0 20px;
+}

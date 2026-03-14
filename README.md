@@ -43,7 +43,11 @@ Para arrancar el proyecto en un entorno local, siga los siguientes pasos:
     `cd WebTejadosCayero`
     `docker compose up -d`
 
-4.  **Acceder a la aplicación:**
+4.  **Importar la base de datos:**
+    Dado que la carpeta de datos no se incluye en el repositorio por razones de peso, debe importar el backup inicial:
+    `docker compose exec -T db mariadb -u tejados -p'tejados' tejados_db < backup_inicial.sql`
+
+5.  **Acceder a la aplicación:**
     Una vez los contenedores estén levantados, podrá acceder a la plataforma desde su navegador:
     *   **Página Web:** [http://localhost](http://localhost)
     *   **Panel de Administración:** [http://localhost/backend](http://localhost/backend)

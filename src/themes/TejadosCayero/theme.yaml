@@ -1,0 +1,13 @@
+name: TejadosCayero
+description: ''
+author: 'October CMS'
+homepage: 'http://octobercms.com'
+authorCode: RainLab
+code: Vanilla
+parent: ''
+database: '0'
+require:
+    - RainLab.User
+    - RainLab.UserPlus
+    - RainLab.Location
+    - RainLab.Forum

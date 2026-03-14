@@ -1703,22 +1703,18 @@
     start() {
       this.promise = cancellablePromise();
       if (!this.applicationAllowsSetup()) {
-        this.promise.resolve(null);
         return this.promise;
       }
       this.initOtherElements();
       this.preprocessOptions();
       this.actions = new Actions(this, this.context, this.options);
       if (this.actions.invokeFunc("beforeSendFunc") === false) {
-        this.promise.resolve(null);
         return this.promise;
       }
       if (!this.validateClientSideForm() || !this.applicationAllowsRequest()) {
-        this.promise.resolve(null);
         return this.promise;
       }
       if (this.options.confirm && !this.actions.invoke("handleConfirmMessage", [this.options.confirm])) {
-        this.promise.resolve(null);
         return this.promise;
       }
       this.sendInternal();
@@ -2428,19 +2424,19 @@
     }
     assignRequestData() {
       const data = {};
-      if (this.options.data) {
-        Object.assign(data, this.options.data);
-      }
-      const attr = this.ogElement.getAttribute("data-request-data");
-      if (attr) {
-        Object.assign(data, JsonParser.paramToObj("data-request-data", attr));
-      }
-      elementParents(this.ogElement, "[data-request-data]").reverse().forEach(function(el) {
+      elementParents(this.ogElement, "[data-request-data]").forEach(function(el) {
         Object.assign(data, JsonParser.paramToObj(
           "data-request-data",
           el.getAttribute("data-request-data")
         ));
       });
+      const attr = this.ogElement.getAttribute("data-request-data");
+      if (attr) {
+        Object.assign(data, JsonParser.paramToObj("data-request-data", attr));
+      }
+      if (this.options.data) {
+        Object.assign(data, this.options.data);
+      }
       this.options.data = data;
     }
   };
@@ -2583,9 +2579,6 @@
      * Handle the trigger event
      */
     handleEvent(event) {
-      if (event && event.defaultPrevented) {
-        return;
-      }
       if (!this.isConnected()) {
         return;
       }

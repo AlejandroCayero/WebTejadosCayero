@@ -1,0 +1,36 @@
+==
+<?
+function onStart()
+{
+    $this['backendUrl'] = System::checkDebugMode() ? Backend::url('/') : null;
+}
+?>
+==
+<header class="main-header {{ this.page.id != 'home' ? 'header-scrolled static-page' : '' }}">    <div class="container-fluid px-lg-5">
+        <div class="row align-items-center">
+            <!-- Logo Placeholder -->
+            <div class="col-6 col-lg-2">
+                  <a href="{{ 'index'|page }}" class="text-decoration-none">
+                     <div style="color: white; font-weight: bold; font-size: 1.2rem;">
+                       <i class="fas fa-home text-danger"></i> TEJADOS<span style="color:var(--primary-orange)">CAYERO</span>
+                     </div>
+                  </a>
+            </div>
+
+            <!-- Menú Desktop -->
+            <div class="col-lg-6 d-none d-lg-block">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item"><a class="nav-link" href="{{ 'empresa'|page }}">Empresa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ 'servicios'|page }}">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ 'trabajos'|page }}">Trabajos Realizados</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ 'contacto'|page }}">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!-- Contacto y CTA -->
+            <div class="col-6 col-lg-4 text-end text-white">
+                <a href="#" class="btn btn-orange d-none d-md-inline-block">Solicitar presupuesto</a>
+            </div>
+        </div>
+    </div>
+</header>
