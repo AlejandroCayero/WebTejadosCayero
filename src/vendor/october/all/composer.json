@@ -1,0 +1,15 @@
+{
+    "name": "october/all",
+    "description": "All common modules for October CMS",
+    "homepage": "https://octobercms.com",
+    "keywords": ["october cms", "october", "core", "all"],
+    "require": {
+        "october/system": "4.1.*",
+        "october/backend": "4.1.*",
+        "october/cms": "4.1.*",
+        "october/media": "4.1.*",
+        "october/editor": "4.1.*",
+        "october/tailor": "4.1.*",
+        "october/dashboard": "4.1.*"
+    }
+}
