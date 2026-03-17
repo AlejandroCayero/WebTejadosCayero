@@ -58,6 +58,37 @@
             "install-path": "../bacon/bacon-qr-code"
         },
         {
+            "name": "blakejones/magicforms-plugin",
+            "version": "v1.6.6",
+            "version_normalized": "1.6.6.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://gateway.octobercms.com/composer/dist/blakejones/magicforms-plugin/blakejones-magicforms-plugin-64b17084ca2a9686e15554925dc891e05ef8f329-zip-c125c3.zip",
+                "reference": "64b17084ca2a9686e15554925dc891e05ef8f329",
+                "shasum": "e922870d6df5a8e14f4eee369fc8b5b35f9914e9"
+            },
+            "time": "2024-02-26T02:23:45+00:00",
+            "type": "october-plugin",
+            "installation-source": "dist",
+            "license": [
+                "MIT"
+            ],
+            "description": "Create easy (and almost magic) AJAX forms",
+            "homepage": "https://github.com/blakej115/magic-forms",
+            "keywords": [
+                "cms",
+                "forms",
+                "magic forms",
+                "october",
+                "plugin"
+            ],
+            "support": {
+                "source": "https://github.com/blakej115/magic-forms/tree/v1.6.6",
+                "issues": "https://github.com/blakej115/magic-forms/issues"
+            },
+            "install-path": "../../plugins/blakejones/magicforms"
+        },
+        {
             "name": "brick/math",
             "version": "0.14.8",
             "version_normalized": "0.14.8.0",

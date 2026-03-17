@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0919df8d8e51616ba780d1dd1146524f",
+    "content-hash": "a3c5e4e9f20fb27f1a00cd558985c092",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -59,6 +59,34 @@
                 "source": "https://github.com/Bacon/BaconQrCode/tree/2.0.8"
             },
             "time": "2022-12-07T17:46:57+00:00"
+        },
+        {
+            "name": "blakejones/magicforms-plugin",
+            "version": "v1.6.6",
+            "dist": {
+                "type": "zip",
+                "url": "https://gateway.octobercms.com/composer/dist/blakejones/magicforms-plugin/blakejones-magicforms-plugin-64b17084ca2a9686e15554925dc891e05ef8f329-zip-c125c3.zip",
+                "reference": "64b17084ca2a9686e15554925dc891e05ef8f329",
+                "shasum": "e922870d6df5a8e14f4eee369fc8b5b35f9914e9"
+            },
+            "type": "october-plugin",
+            "license": [
+                "MIT"
+            ],
+            "description": "Create easy (and almost magic) AJAX forms",
+            "homepage": "https://github.com/blakej115/magic-forms",
+            "keywords": [
+                "cms",
+                "forms",
+                "magic forms",
+                "october",
+                "plugin"
+            ],
+            "support": {
+                "source": "https://github.com/blakej115/magic-forms/tree/v1.6.6",
+                "issues": "https://github.com/blakej115/magic-forms/issues"
+            },
+            "time": "2024-02-26T02:23:45+00:00"
         },
         {
             "name": "brick/math",

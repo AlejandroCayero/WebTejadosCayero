@@ -16,6 +16,12 @@ public_html/storage
 public_html/hot
 
 storage/*.key
+/storage/cms/*
+/storage/framework/*
+/storage/logs/*
+/storage/temp/*
+/vendor
+
 .env
 Homestead.yaml
 Homestead.json

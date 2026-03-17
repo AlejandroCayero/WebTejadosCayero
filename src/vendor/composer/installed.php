@@ -19,6 +19,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'blakejones/magicforms-plugin' => array(
+            'pretty_version' => 'v1.6.6',
+            'version' => '1.6.6.0',
+            'reference' => '64b17084ca2a9686e15554925dc891e05ef8f329',
+            'type' => 'october-plugin',
+            'install_path' => __DIR__ . '/../../plugins/blakejones/magicforms',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'brick/math' => array(
             'pretty_version' => '0.14.8',
             'version' => '0.14.8.0',

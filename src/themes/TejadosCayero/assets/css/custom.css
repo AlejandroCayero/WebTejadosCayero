@@ -156,7 +156,7 @@ body {
 
 /* Botón "Ver más" redondeado azul/celeste como tu referencia */
 .btn-ver-mas {
-    background-color: #29abe2; /* Color azul de la imagen de referencia */
+    background-color: #29abe2; 
     color: white;
     padding: 12px 35px;
     border-radius: 50px;
@@ -178,6 +178,88 @@ body {
     height: 450px; /* Forzamos una altura fija para que todas las fotos de servicios sean iguales */
     object-fit: cover; /* Evita que se deformen al forzar la altura */
     width: 100%;
+}
+
+/* --- ESTILOS DE CONTACTO SIMPLIFICADOS (V2) --- */
+
+/* Sección de cabecera de contacto */
+.contact-hero-section {
+    background-color: var(--dark-blue); /* Usa tu azul oscuro principal */
+    padding: 80px 0;
+    text-align: center;
+    color: white;
+    margin-top: -140px; /* Elimina el espacio superior del page-content-offset */
+    padding-top: 140px; /* Compensa el padding-top para que el contenido no se pegue al header */
+}
+
+/* Sección principal del formulario (fondo suave) */
+.form-main-section {
+    background-color: #f0f2f5; /* Un gris más claro para que la tarjeta blanca contraste más */
+    padding: 80px 0;
+}
+
+/* La tarjeta que contiene el formulario (fondo blanco) */
+.form-container-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Sombra suave para que "flote" */
+    padding: 40px;
+    margin-top: -60px; /* Para que la tarjeta "muerda" un poco el bloque azul de arriba */
+}
+
+/* Estilo para los campos de entrada */
+.form-custom-input {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 12px 15px;
+    background-color: #fcfcfc; /* Un fondo muy ligero para los inputs */
+}
+
+.form-custom-input:focus {
+    border-color: var(--primary-orange);
+    box-shadow: 0 0 0 0.25rem rgba(214, 106, 74, 0.1); /* Efecto de foco sutil */
+}
+
+/* Estilo para el campo de subida de fotos (más visual) */
+.file-upload-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #f0f2f5; /* Fondo gris claro */
+    border: 1px dashed #ccc; /* Borde discontinuo */
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.file-upload-visual:hover {
+    border-color: var(--primary-orange);
+    background-color: #e8ebf0;
+}
+
+.file-upload-visual i {
+    color: var(--primary-orange);
+    font-size: 1.2rem;
+}
+
+.file-upload-visual span {
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* Ocultar el input file original */
+.file-upload-visual input[type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 /* Footer */

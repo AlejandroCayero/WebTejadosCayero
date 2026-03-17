@@ -2,7 +2,178 @@ url = "/contacto"
 layout = "default"
 title = "Contacto"
 ==
-<div class="container">
-    <h1 class="display-4 fw-bold text-uppercase mb-4">Contacto</h1>
-    <p>Solicita tu presupuesto sin compromiso.</p>
-</div>
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Validator;
+use October\Rain\Support\Facades\Flash;
+use October\Rain\Exception\ValidationException;
+use System\Models\File;
+
+function onSendContact()
+{
+    $rules = [
+        'nombre'   => 'required',
+        'email'    => 'required|email',
+        'telefono' => 'required',
+        'mensaje'  => 'required|min:10',
+        'fotos.*'  => 'nullable|image|max:5120',
+    ];
+
+    $messages = [
+        'nombre.required'   => 'Por favor, dinos tu nombre.',
+        'email.required'    => 'Necesitamos tu email para responderte.',
+        'email.email'       => 'El formato del email no es válido.',
+        'telefono.required' => 'Por favor, dinos tu teléfono.',
+        'mensaje.required'  => 'Cuéntanos qué necesitas en el mensaje.',
+        'mensaje.min'       => 'El mensaje debe ser un poco más largo.',
+        'fotos.*.image'     => 'Los archivos adjuntos deben ser imágenes.',
+        'fotos.*.max'       => 'Cada foto no debe pesar más de 5MB.',
+    ];
+
+    $validator = Validator::make(post(), $rules, $messages);
+
+    if ($validator->fails()) {
+        throw new ValidationException($validator);
+    }
+
+    $data = post();
+    $attachments = [];
+
+    if (input('fotos')) {
+        foreach (input('fotos') as $file) {
+            $systemFile = new File();
+            $systemFile->data = $file;
+            $systemFile->save();
+            $attachments[] = $systemFile->getLocalPath(); // Usamos getLocalPath para el envío
+        }
+    }
+
+    Mail::send('contacto.mensaje_recibido', $data, function($message) use ($attachments) {
+        // Asegúrate de que este email sea el que verificaste en SendGrid
+        $message->to('alejandrocayero93@gmail.com', 'Administrador Tejados Cayero'); 
+        $message->subject('Nuevo presupuesto desde la web');
+
+        foreach ($attachments as $path) {
+            $message->attach($path);
+        }
+    });
+
+    Flash::success('¡Tu mensaje ha sido enviado con éxito!');
+}
+==
+<!-- Sección Superior -->
+<section class="contact-hero-section">
+    <div class="container">
+        <h1>Contacta con nosotros</h1>
+        <div class="sub-linea" style="background-color: white; margin: 20px auto 0;"></div>
+        <p class="lead mt-3 opacity-75">Tu proyecto de tejados, a un mensaje de distancia.</p>
+    </div>
+</section>
+
+<!-- Sección Principal del Formulario -->
+<section class="form-main-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <div class="form-container-card">
+                    <h2 class="fw-bold mb-4 text-center" style="color: var(--dark-blue);">Pide tu presupuesto</h2>
+                    <p class="text-center text-muted mb-5">Rellena el formulario y te responderemos en menos de 24 horas.</p>
+
+                    <form data-request="onSendContact"
+                          data-request-validate
+                          data-request-flash
+                          data-request-files
+                          id="contact-form">
+
+                        {{ form_token() }}
+
+                        <div id="form-body">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label small fw-bold">Nombre</label>
+                                    <input type="text" name="nombre" class="form-control form-custom-input" placeholder="Tu nombre">
+                                    <div class="invalid-feedback" data-validate-for="nombre"></div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label small fw-bold">Email</label>
+                                    <input type="email" name="email" class="form-control form-custom-input" placeholder="tu@email.com">
+                                    <div class="invalid-feedback" data-validate-for="email"></div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label small fw-bold">Teléfono</label>
+                                    <input type="text" name="telefono" class="form-control form-custom-input" placeholder="600 000 000">
+                                    <div class="invalid-feedback" data-validate-for="telefono"></div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label small fw-bold">Fotos (Opcional)</label>
+                                    <label for="file-upload" class="file-upload-visual">
+                                        <i class="fas fa-camera"></i>
+                                        <span id="file-name">Elegir archivos</span>
+                                        <input id="file-upload" type="file" name="fotos[]" multiple accept="image/*" onchange="updateFileName(this)">
+                                    </label>
+                                    <div class="invalid-feedback" data-validate-for="fotos"></div>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label small fw-bold">Mensaje</label>
+                                <textarea name="mensaje" class="form-control form-custom-input" rows="5" placeholder="Describe brevemente lo que necesitas..."></textarea>
+                                <div class="invalid-feedback" data-validate-for="mensaje"></div>
+                            </div>
+
+                            <button type="submit" class="btn btn-orange w-100 py-3 fw-bold" data-attach-loading>
+                                ENVIAR SOLICITUD
+                            </button>
+                        </div>
+
+                        <!-- Mensaje de Éxito -->
+                        <div id="success-alert" class="text-center py-5" style="display:none;">
+                            <i class="fas fa-check-circle fa-4x text-success mb-3"></i>
+                            <h3 class="fw-bold">¡Solicitud enviada!</h3>
+                            <p class="text-muted">Hemos recibido tus datos correctamente.</p>
+                            <button type="button" class="btn btn-dark rounded-pill px-4 mt-3" onclick="location.reload()">Enviar otra consulta</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% put scripts %}
+<script>
+    function updateFileName(input) {
+        const fileNameSpan = document.getElementById('file-name');
+        if (input.files && input.files.length > 0) {
+            fileNameSpan.textContent = input.files.length === 1 ? input.files[0].name : input.files.length + ' archivos';
+        } else {
+            fileNameSpan.textContent = 'Elegir archivos';
+        }
+    }
+
+    // Cuando el envío es EXITOSO
+    $(window).on('ajaxSuccess', function(event, context, data) {
+        if (context.handler === 'onSendContact') {
+            $('#form-body').fadeOut(300, function() {
+                $('#success-alert').fadeIn();
+            });
+        }
+    });
+
+    // Cuando hay errores de VALIDACIÓN
+    $(window).on('ajaxInvalidField', function(event, fieldElement, fieldName, errorMsg, isFirst) {
+        // Añadimos la clase de Bootstrap al input
+        $(fieldElement).addClass('is-invalid');
+        // Buscamos el div de error y le metemos el texto
+        $('[data-validate-for="'+fieldName+'"]').text(errorMsg[0]).show();
+    });
+
+    // Limpiar errores al volver a escribir
+    $(document).on('ajaxPromise', '[data-request]', function() {
+        $(this).find('.is-invalid').removeClass('is-invalid');
+        $(this).find('.invalid-feedback').empty().hide();
+    });
+</script>
+{% endput %}
