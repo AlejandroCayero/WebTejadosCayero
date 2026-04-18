@@ -1,36 +1,44 @@
 ==
-<?
+
 function onStart()
 {
     $this['backendUrl'] = System::checkDebugMode() ? Backend::url('/') : null;
 }
-?>
-==
-<header class="main-header {{ this.page.id != 'index' ? 'header-scrolled static-page' : '' }}">    <div class="container-fluid px-lg-5">
-        <div class="row align-items-center">
-            <!-- Logo Placeholder -->
-            <div class="col-6 col-lg-2">
-                  <a href="{{ 'index'|page }}" class="text-decoration-none">
-                     <div style="color: white; font-weight: bold; font-size: 1.2rem;">
-                       <i class="fas fa-home text-danger"></i> TEJADOS<span style="color:var(--primary-orange)">CAYERO</span>
-                     </div>
-                  </a>
-            </div>
 
-            <!-- Menú Desktop -->
-            <div class="col-lg-6 d-none d-lg-block">
-                <ul class="nav justify-content-center">
-                    <li class="nav-item"><a class="nav-link" href="{{ 'empresa'|page }}">Empresa</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ 'servicios'|page }}">Servicios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ 'trabajos'|page }}">Trabajos Realizados</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ 'contacto'|page }}">Contacto</a></li>
+==
+<header class="main-header {{ this.page.id != 'index' ? 'header-scrolled static-page' : '' }}">
+    <div class="container-fluid px-lg-5">
+        <!-- Usamos navbar y navbar-expand-xl para que colapse en pantallas menores de 1200px -->
+        <nav class="navbar navbar-expand-xl navbar-dark py-3">
+            
+            <!-- 1. Logo (Alineado a la izquierda) -->
+            <a href="{{ 'index'|page }}" class="navbar-brand text-decoration-none me-auto">
+                <div style="color: white; font-weight: bold; font-size: 1.2rem;">
+                    <i class="fas fa-home text-danger"></i> TEJADOS<span style="color:var(--primary-orange)">CAYERO</span>
+                </div>
+            </a>
+
+            <!-- 2. Botón de Menu (Aparece cuando la pantalla es pequeña) -->
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- 3. Menú Colapsable (Centrado) -->
+            <div class="collapse navbar-collapse justify-content-center" id="menuNavegacion">
+                <!-- Usamos navbar-nav en lugar de nav -->
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link px-3 text-white" href="{{ 'empresa'|page }}">Empresa</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 text-white" href="{{ 'servicios'|page }}">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 text-white" href="{{ 'trabajos'|page }}">Trabajos Realizados</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 text-white" href="{{ 'Trabaja_con_nosotros'|page }}">Trabaja con Nosotros</a></li>
                 </ul>
             </div>
 
-            <!-- Contacto y CTA -->
-            <div class="col-6 col-lg-4 text-end text-white">
-                <a href="#" class="btn btn-orange d-none d-md-inline-block">Solicitar presupuesto</a>
+            <!-- 4. Contacto y CTA  -->
+            <div class="d-flex ms-auto">
+                <a href="{{ 'contacto'|page }}" class="btn btn-orange">Solicitar presupuesto</a>
             </div>
-        </div>
+
+        </nav>
     </div>
 </header>

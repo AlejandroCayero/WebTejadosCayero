@@ -1670,6 +1670,51 @@
             "time": "2025-03-06T22:45:56+00:00"
         },
         {
+            "name": "enshrined/svg-sanitize",
+            "version": "0.22.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/darylldoyle/svg-sanitizer.git",
+                "reference": "0afa95ea74be155a7bcd6c6fb60c276c39984500"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/darylldoyle/svg-sanitizer/zipball/0afa95ea74be155a7bcd6c6fb60c276c39984500",
+                "reference": "0afa95ea74be155a7bcd6c6fb60c276c39984500",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-libxml": "*",
+                "php": "^7.1 || ^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.5 || ^8.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "enshrined\\svgSanitize\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Daryll Doyle",
+                    "email": "daryll@enshrined.co.uk"
+                }
+            ],
+            "description": "An SVG sanitizer for PHP",
+            "support": {
+                "issues": "https://github.com/darylldoyle/svg-sanitizer/issues",
+                "source": "https://github.com/darylldoyle/svg-sanitizer/tree/0.22.0"
+            },
+            "time": "2025-08-12T10:13:48+00:00"
+        },
+        {
             "name": "firebase/php-jwt",
             "version": "v7.0.3",
             "source": {
@@ -2423,23 +2468,23 @@
         },
         {
             "name": "jaybizzle/crawler-detect",
-            "version": "v1.3.7",
+            "version": "v1.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JayBizzle/Crawler-Detect.git",
-                "reference": "7f7a45b5d5df9c95ba6b2008544e6cf8e66de6f5"
+                "reference": "1882af9b76cb1dbfba3256de2562c3cd383f9b8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JayBizzle/Crawler-Detect/zipball/7f7a45b5d5df9c95ba6b2008544e6cf8e66de6f5",
-                "reference": "7f7a45b5d5df9c95ba6b2008544e6cf8e66de6f5",
+                "url": "https://api.github.com/repos/JayBizzle/Crawler-Detect/zipball/1882af9b76cb1dbfba3256de2562c3cd383f9b8f",
+                "reference": "1882af9b76cb1dbfba3256de2562c3cd383f9b8f",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8|^5.5|^6.5|^7.5|^8.5|^9.4"
+                "phpunit/phpunit": "^4.8|^5.5|^6.5|^7.5|^8.5.52|^9.4"
             },
             "type": "library",
             "autoload": {
@@ -2469,9 +2514,9 @@
             ],
             "support": {
                 "issues": "https://github.com/JayBizzle/Crawler-Detect/issues",
-                "source": "https://github.com/JayBizzle/Crawler-Detect/tree/v1.3.7"
+                "source": "https://github.com/JayBizzle/Crawler-Detect/tree/v1.3.8"
             },
-            "time": "2026-02-02T19:15:54+00:00"
+            "time": "2026-03-26T23:01:33+00:00"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -2550,16 +2595,16 @@
         },
         {
             "name": "larajax/larajax",
-            "version": "v2.0.15",
+            "version": "v2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/larajax/larajax.git",
-                "reference": "b9ec8f2ff5b75c2f4ca9ed2c4ffa4af560f9157f"
+                "reference": "3568b90eadd5f4e9bd90a37752c1329dd2640a8c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/larajax/larajax/zipball/b9ec8f2ff5b75c2f4ca9ed2c4ffa4af560f9157f",
-                "reference": "b9ec8f2ff5b75c2f4ca9ed2c4ffa4af560f9157f",
+                "url": "https://api.github.com/repos/larajax/larajax/zipball/3568b90eadd5f4e9bd90a37752c1329dd2640a8c",
+                "reference": "3568b90eadd5f4e9bd90a37752c1329dd2640a8c",
                 "shasum": ""
             },
             "require": {
@@ -2595,22 +2640,22 @@
             "homepage": "https://larajax.org",
             "support": {
                 "issues": "https://github.com/larajax/larajax/issues",
-                "source": "https://github.com/larajax/larajax/tree/v2.0.15"
+                "source": "https://github.com/larajax/larajax/tree/v2.1.0"
             },
-            "time": "2026-03-12T06:49:29+00:00"
+            "time": "2026-03-20T09:03:56+00:00"
         },
         {
             "name": "laravel/framework",
-            "version": "v12.54.1",
+            "version": "v12.56.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "325497463e7599cd14224c422c6e5dd2fe832868"
+                "reference": "dac16d424b59debb2273910dde88eb7050a2a709"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/325497463e7599cd14224c422c6e5dd2fe832868",
-                "reference": "325497463e7599cd14224c422c6e5dd2fe832868",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/dac16d424b59debb2273910dde88eb7050a2a709",
+                "reference": "dac16d424b59debb2273910dde88eb7050a2a709",
                 "shasum": ""
             },
             "require": {
@@ -2726,7 +2771,7 @@
                 "orchestra/testbench-core": "^10.9.0",
                 "pda/pheanstalk": "^5.0.6|^7.0.0",
                 "php-http/discovery": "^1.15",
-                "phpstan/phpstan": "^2.0",
+                "phpstan/phpstan": "^2.1.41",
                 "phpunit/phpunit": "^10.5.35|^11.5.3|^12.0.1",
                 "predis/predis": "^2.3|^3.0",
                 "resend/resend-php": "^0.10.0|^1.0",
@@ -2819,20 +2864,20 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2026-03-10T20:25:56+00:00"
+            "time": "2026-03-26T14:51:54+00:00"
         },
         {
             "name": "laravel/prompts",
-            "version": "v0.3.14",
+            "version": "v0.3.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/prompts.git",
-                "reference": "9f0e371244eedfe2ebeaa72c79c54bb5df6e0176"
+                "reference": "11e7d5f93803a2190b00e145142cb00a33d17ad2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/prompts/zipball/9f0e371244eedfe2ebeaa72c79c54bb5df6e0176",
-                "reference": "9f0e371244eedfe2ebeaa72c79c54bb5df6e0176",
+                "url": "https://api.github.com/repos/laravel/prompts/zipball/11e7d5f93803a2190b00e145142cb00a33d17ad2",
+                "reference": "11e7d5f93803a2190b00e145142cb00a33d17ad2",
                 "shasum": ""
             },
             "require": {
@@ -2876,9 +2921,9 @@
             "description": "Add beautiful and user-friendly forms to your command-line applications.",
             "support": {
                 "issues": "https://github.com/laravel/prompts/issues",
-                "source": "https://github.com/laravel/prompts/tree/v0.3.14"
+                "source": "https://github.com/laravel/prompts/tree/v0.3.16"
             },
-            "time": "2026-03-01T09:02:38+00:00"
+            "time": "2026-03-23T14:35:33+00:00"
         },
         {
             "name": "laravel/serializable-closure",
@@ -2943,33 +2988,33 @@
         },
         {
             "name": "laravel/tinker",
-            "version": "v2.11.1",
+            "version": "v3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/tinker.git",
-                "reference": "c9f80cc835649b5c1842898fb043f8cc098dd741"
+                "reference": "cc74081282ba2e3dae1f0068ccb330370d24634e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/tinker/zipball/c9f80cc835649b5c1842898fb043f8cc098dd741",
-                "reference": "c9f80cc835649b5c1842898fb043f8cc098dd741",
+                "url": "https://api.github.com/repos/laravel/tinker/zipball/cc74081282ba2e3dae1f0068ccb330370d24634e",
+                "reference": "cc74081282ba2e3dae1f0068ccb330370d24634e",
                 "shasum": ""
             },
             "require": {
-                "illuminate/console": "^6.0|^7.0|^8.0|^9.0|^10.0|^11.0|^12.0",
-                "illuminate/contracts": "^6.0|^7.0|^8.0|^9.0|^10.0|^11.0|^12.0",
-                "illuminate/support": "^6.0|^7.0|^8.0|^9.0|^10.0|^11.0|^12.0",
-                "php": "^7.2.5|^8.0",
-                "psy/psysh": "^0.11.1|^0.12.0",
-                "symfony/var-dumper": "^4.3.4|^5.0|^6.0|^7.0|^8.0"
+                "illuminate/console": "^8.0|^9.0|^10.0|^11.0|^12.0|^13.0",
+                "illuminate/contracts": "^8.0|^9.0|^10.0|^11.0|^12.0|^13.0",
+                "illuminate/support": "^8.0|^9.0|^10.0|^11.0|^12.0|^13.0",
+                "php": "^8.1",
+                "psy/psysh": "^0.12.0",
+                "symfony/var-dumper": "^5.4|^6.0|^7.0|^8.0"
             },
             "require-dev": {
                 "mockery/mockery": "~1.3.3|^1.4.2",
                 "phpstan/phpstan": "^1.10",
-                "phpunit/phpunit": "^8.5.8|^9.3.3|^10.0"
+                "phpunit/phpunit": "^10.5|^11.5"
             },
             "suggest": {
-                "illuminate/database": "The Illuminate Database package (^6.0|^7.0|^8.0|^9.0|^10.0|^11.0|^12.0)."
+                "illuminate/database": "The Illuminate Database package (^8.0|^9.0|^10.0|^11.0|^12.0|^13.0)."
             },
             "type": "library",
             "extra": {
@@ -2977,6 +3022,9 @@
                     "providers": [
                         "Laravel\\Tinker\\TinkerServiceProvider"
                     ]
+                },
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
                 }
             },
             "autoload": {
@@ -3003,22 +3051,22 @@
             ],
             "support": {
                 "issues": "https://github.com/laravel/tinker/issues",
-                "source": "https://github.com/laravel/tinker/tree/v2.11.1"
+                "source": "https://github.com/laravel/tinker/tree/v3.0.0"
             },
-            "time": "2026-02-06T14:12:35+00:00"
+            "time": "2026-03-17T14:53:17+00:00"
         },
         {
             "name": "league/commonmark",
-            "version": "2.8.1",
+            "version": "2.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "84b1ca48347efdbe775426f108622a42735a6579"
+                "reference": "59fb075d2101740c337c7216e3f32b36c204218b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/84b1ca48347efdbe775426f108622a42735a6579",
-                "reference": "84b1ca48347efdbe775426f108622a42735a6579",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/59fb075d2101740c337c7216e3f32b36c204218b",
+                "reference": "59fb075d2101740c337c7216e3f32b36c204218b",
                 "shasum": ""
             },
             "require": {
@@ -3112,7 +3160,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-03-05T21:37:03+00:00"
+            "time": "2026-03-19T13:16:38+00:00"
         },
         {
             "name": "league/config",
@@ -3289,16 +3337,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "3.32.0",
+            "version": "3.33.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "254b1595b16b22dbddaaef9ed6ca9fdac4956725"
+                "reference": "570b8871e0ce693764434b29154c54b434905350"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/254b1595b16b22dbddaaef9ed6ca9fdac4956725",
-                "reference": "254b1595b16b22dbddaaef9ed6ca9fdac4956725",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/570b8871e0ce693764434b29154c54b434905350",
+                "reference": "570b8871e0ce693764434b29154c54b434905350",
                 "shasum": ""
             },
             "require": {
@@ -3366,9 +3414,9 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem/issues",
-                "source": "https://github.com/thephpleague/flysystem/tree/3.32.0"
+                "source": "https://github.com/thephpleague/flysystem/tree/3.33.0"
             },
-            "time": "2026-02-25T17:01:41+00:00"
+            "time": "2026-03-25T07:59:30+00:00"
         },
         {
             "name": "league/flysystem-local",
@@ -3477,20 +3525,20 @@
         },
         {
             "name": "league/uri",
-            "version": "7.8.0",
+            "version": "7.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/uri.git",
-                "reference": "4436c6ec8d458e4244448b069cc572d088230b76"
+                "reference": "08cf38e3924d4f56238125547b5720496fac8fd4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/uri/zipball/4436c6ec8d458e4244448b069cc572d088230b76",
-                "reference": "4436c6ec8d458e4244448b069cc572d088230b76",
+                "url": "https://api.github.com/repos/thephpleague/uri/zipball/08cf38e3924d4f56238125547b5720496fac8fd4",
+                "reference": "08cf38e3924d4f56238125547b5720496fac8fd4",
                 "shasum": ""
             },
             "require": {
-                "league/uri-interfaces": "^7.8",
+                "league/uri-interfaces": "^7.8.1",
                 "php": "^8.1",
                 "psr/http-factory": "^1"
             },
@@ -3563,7 +3611,7 @@
                 "docs": "https://uri.thephpleague.com",
                 "forum": "https://thephpleague.slack.com",
                 "issues": "https://github.com/thephpleague/uri-src/issues",
-                "source": "https://github.com/thephpleague/uri/tree/7.8.0"
+                "source": "https://github.com/thephpleague/uri/tree/7.8.1"
             },
             "funding": [
                 {
@@ -3571,20 +3619,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-01-14T17:24:56+00:00"
+            "time": "2026-03-15T20:22:25+00:00"
         },
         {
             "name": "league/uri-interfaces",
-            "version": "7.8.0",
+            "version": "7.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/uri-interfaces.git",
-                "reference": "c5c5cd056110fc8afaba29fa6b72a43ced42acd4"
+                "reference": "85d5c77c5d6d3af6c54db4a78246364908f3c928"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/uri-interfaces/zipball/c5c5cd056110fc8afaba29fa6b72a43ced42acd4",
-                "reference": "c5c5cd056110fc8afaba29fa6b72a43ced42acd4",
+                "url": "https://api.github.com/repos/thephpleague/uri-interfaces/zipball/85d5c77c5d6d3af6c54db4a78246364908f3c928",
+                "reference": "85d5c77c5d6d3af6c54db4a78246364908f3c928",
                 "shasum": ""
             },
             "require": {
@@ -3647,7 +3695,7 @@
                 "docs": "https://uri.thephpleague.com",
                 "forum": "https://thephpleague.slack.com",
                 "issues": "https://github.com/thephpleague/uri-src/issues",
-                "source": "https://github.com/thephpleague/uri-interfaces/tree/7.8.0"
+                "source": "https://github.com/thephpleague/uri-interfaces/tree/7.8.1"
             },
             "funding": [
                 {
@@ -3655,7 +3703,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-01-15T06:54:53+00:00"
+            "time": "2026-03-08T20:05:35+00:00"
         },
         {
             "name": "linkorb/jsmin-php",
@@ -3790,6 +3838,73 @@
                 "source": "https://github.com/marc-mabe/php-enum/tree/v4.7.2"
             },
             "time": "2025-09-14T11:18:39+00:00"
+        },
+        {
+            "name": "masterminds/html5",
+            "version": "2.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Masterminds/html5-php.git",
+                "reference": "fcf91eb64359852f00d921887b219479b4f21251"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Masterminds/html5-php/zipball/fcf91eb64359852f00d921887b219479b4f21251",
+                "reference": "fcf91eb64359852f00d921887b219479b4f21251",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35 || ^5.7.21 || ^6 || ^7 || ^8 || ^9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Masterminds\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matt Butcher",
+                    "email": "technosophos@gmail.com"
+                },
+                {
+                    "name": "Matt Farina",
+                    "email": "matt@mattfarina.com"
+                },
+                {
+                    "name": "Asmir Mustafic",
+                    "email": "goetas@gmail.com"
+                }
+            ],
+            "description": "An HTML5 parser and serializer.",
+            "homepage": "http://masterminds.github.io/html5-php",
+            "keywords": [
+                "HTML5",
+                "dom",
+                "html",
+                "parser",
+                "querypath",
+                "serializer",
+                "xml"
+            ],
+            "support": {
+                "issues": "https://github.com/Masterminds/html5-php/issues",
+                "source": "https://github.com/Masterminds/html5-php/tree/2.10.0"
+            },
+            "time": "2025-07-25T09:04:22+00:00"
         },
         {
             "name": "mobiledetect/mobiledetectlib",
@@ -4368,26 +4483,26 @@
         },
         {
             "name": "october/all",
-            "version": "v4.1.0",
+            "version": "v4.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/octoberrain/all.git",
-                "reference": "86a9142b442add59fa6e16a4e48678ecada7b301"
+                "reference": "4a959a3b1ab1081e340488acfa40edd294806441"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/octoberrain/all/zipball/86a9142b442add59fa6e16a4e48678ecada7b301",
-                "reference": "86a9142b442add59fa6e16a4e48678ecada7b301",
+                "url": "https://api.github.com/repos/octoberrain/all/zipball/4a959a3b1ab1081e340488acfa40edd294806441",
+                "reference": "4a959a3b1ab1081e340488acfa40edd294806441",
                 "shasum": ""
             },
             "require": {
-                "october/backend": "4.1.*",
-                "october/cms": "4.1.*",
-                "october/dashboard": "4.1.*",
-                "october/editor": "4.1.*",
-                "october/media": "4.1.*",
-                "october/system": "4.1.*",
-                "october/tailor": "4.1.*"
+                "october/backend": "4.2.*",
+                "october/cms": "4.2.*",
+                "october/dashboard": "4.2.*",
+                "october/editor": "4.2.*",
+                "october/media": "4.2.*",
+                "october/system": "4.2.*",
+                "october/tailor": "4.2.*"
             },
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
@@ -4401,21 +4516,18 @@
             ],
             "support": {
                 "issues": "https://github.com/octoberrain/all/issues",
-                "source": "https://github.com/octoberrain/all/tree/v4.1.0"
+                "source": "https://github.com/octoberrain/all/tree/v4.2.0"
             },
-            "time": "2026-01-04T03:00:10+00:00"
+            "time": "2026-03-20T08:25:08+00:00"
         },
         {
             "name": "october/backend",
-            "version": "v4.1.9",
+            "version": "v4.2.8",
             "dist": {
                 "type": "zip",
-                "url": "https://gateway.octobercms.com/composer/dist/october/backend/october-backend-v4.1.9-b47310.zip",
-                "reference": "bf7cdf12b741682eb7093b7a3b337fe354d75fe8",
-                "shasum": "457563e215f964a777c2448759dc72bc65f21c16"
-            },
-            "require": {
-                "composer/installers": "~1.0"
+                "url": "https://gateway.octobercms.com/composer/dist/october/backend/october-backend-v4.2.8-927a94.zip",
+                "reference": "24a84ecb875bde96e8c50f643dda3998d0d56840",
+                "shasum": "374a7ed6d4470282d4844ff781461854ce95c281"
             },
             "type": "october-module",
             "authors": [
@@ -4435,19 +4547,16 @@
                 "october",
                 "october cms"
             ],
-            "time": "2026-01-26T04:16:52+00:00"
+            "time": "2026-03-27T09:31:17+00:00"
         },
         {
             "name": "october/cms",
-            "version": "v4.1.9",
+            "version": "v4.2.8",
             "dist": {
                 "type": "zip",
-                "url": "https://gateway.octobercms.com/composer/dist/october/cms/october-cms-v4.1.9-eb6d27.zip",
-                "reference": "2ef1cf18ad7e2a05b094f35fe47f5b4f2c066ebc",
-                "shasum": "0ec976ca3d9f1d9fac0cb8d5eedf7138dccc2409"
-            },
-            "require": {
-                "composer/installers": "~1.0"
+                "url": "https://gateway.octobercms.com/composer/dist/october/cms/october-cms-v4.2.8-5d93fb.zip",
+                "reference": "73a9cd166e708cec3167ee4e94fa665040667836",
+                "shasum": "7ef6a7ce1998f8e8b5549f019635ceb4f91e5bb0"
             },
             "type": "october-module",
             "authors": [
@@ -4467,19 +4576,16 @@
                 "october",
                 "october cms"
             ],
-            "time": "2026-01-20T19:18:42+00:00"
+            "time": "2026-03-22T00:23:01+00:00"
         },
         {
             "name": "october/dashboard",
-            "version": "v4.1.9",
+            "version": "v4.2.8",
             "dist": {
                 "type": "zip",
-                "url": "https://gateway.octobercms.com/composer/dist/october/dashboard/october-dashboard-v4.1.9-0a861a.zip",
-                "reference": "f8d9a435c1eaf95e00d525d15b3428e6165d5268",
-                "shasum": "9d0a49ecbf49bb9a049080e974a7cf6ddbbf7f39"
-            },
-            "require": {
-                "composer/installers": "~1.0"
+                "url": "https://gateway.octobercms.com/composer/dist/october/dashboard/october-dashboard-v4.2.8-a41718.zip",
+                "reference": "96eb63cb1b5892236c25788ead82b34a52e70770",
+                "shasum": "ccbfb2f83208dab2dd4c2ee0145a9de02f07dadf"
             },
             "type": "october-module",
             "authors": [
@@ -4499,19 +4605,16 @@
                 "october",
                 "october cms"
             ],
-            "time": "2026-01-14T19:57:14+00:00"
+            "time": "2026-03-25T19:57:25+00:00"
         },
         {
             "name": "october/editor",
-            "version": "v4.1.9",
+            "version": "v4.2.8",
             "dist": {
                 "type": "zip",
-                "url": "https://gateway.octobercms.com/composer/dist/october/editor/october-editor-v4.1.9-9ef619.zip",
-                "reference": "2086f116c40f6e5330429de821e96ea00d55cb92",
-                "shasum": "6d82ff46051b65413b797b42afb5393b801db19a"
-            },
-            "require": {
-                "composer/installers": "~1.0"
+                "url": "https://gateway.octobercms.com/composer/dist/october/editor/october-editor-v4.2.8-c12237.zip",
+                "reference": "0cd91499573782977eb42a71e05a62dbd6ea8ee7",
+                "shasum": "39068031bb4fb73f997a5a1ebbc2acb3404c5b10"
             },
             "type": "october-module",
             "authors": [
@@ -4531,19 +4634,16 @@
                 "october",
                 "october cms"
             ],
-            "time": "2026-01-22T09:59:14+00:00"
+            "time": "2026-03-15T05:53:24+00:00"
         },
         {
             "name": "october/media",
-            "version": "v4.1.9",
+            "version": "v4.2.8",
             "dist": {
                 "type": "zip",
-                "url": "https://gateway.octobercms.com/composer/dist/october/media/october-media-v4.1.9-7eb529.zip",
-                "reference": "064db490c6194ef84922c581ff3091c3fbf42842",
-                "shasum": "b1b1b46cb66a6022fa27554146937460bb3cdebe"
-            },
-            "require": {
-                "composer/installers": "~1.0"
+                "url": "https://gateway.octobercms.com/composer/dist/october/media/october-media-v4.2.8-48d300.zip",
+                "reference": "b932b9dbc24075db4e48108ccc535fb4e36c1081",
+                "shasum": "a06d9f1853be808e982a9480d9d32fc64cabcc4e"
             },
             "type": "october-module",
             "authors": [
@@ -4563,34 +4663,36 @@
                 "october",
                 "october cms"
             ],
-            "time": "2026-01-14T19:57:14+00:00"
+            "time": "2026-03-21T12:45:30+00:00"
         },
         {
             "name": "october/rain",
-            "version": "v4.1.18",
+            "version": "v4.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/octobercms/library.git",
-                "reference": "cea30680fe0212f7897cdefdb75ea1e76f584f9e"
+                "reference": "d955c6c9f06cabfbfdf05e06973bccbbc3f50ad3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/octobercms/library/zipball/cea30680fe0212f7897cdefdb75ea1e76f584f9e",
-                "reference": "cea30680fe0212f7897cdefdb75ea1e76f584f9e",
+                "url": "https://api.github.com/repos/octobercms/library/zipball/d955c6c9f06cabfbfdf05e06973bccbbc3f50ad3",
+                "reference": "d955c6c9f06cabfbfdf05e06973bccbbc3f50ad3",
                 "shasum": ""
             },
             "require": {
                 "composer/composer": "^2.0.0",
                 "composer/installers": "^1 || ^2",
                 "doctrine/dbal": "^2.13.3|^3.1.4",
+                "enshrined/svg-sanitize": "^0.15|^0.16|^0.17|^0.18|^0.19|^0.20|^0.21|^0.22",
                 "intervention/image": "^3.10",
                 "jaybizzle/crawler-detect": "^1.3",
                 "larajax/larajax": "^2.0",
-                "laravel/tinker": "~2.0",
+                "laravel/tinker": "~2.0|~3.0",
                 "league/csv": "~9.1",
                 "linkorb/jsmin-php": "~1.0",
                 "php": "^8.1",
                 "scssphp/scssphp": "~1.0",
+                "symfony/html-sanitizer": "^6.1|^7.0",
                 "symfony/yaml": "^6.4|^7.0",
                 "twig/twig": "^3.21",
                 "wikimedia/less.php": "~5.2"
@@ -4598,7 +4700,7 @@
             "require-dev": {
                 "laravel/framework": "^12.0",
                 "meyfa/phpunit-assert-gd": "^2.0.0|^3.0.0",
-                "phpbench/phpbench": "^1.2",
+                "phpbench/phpbench": "^1.4",
                 "phpunit/phpunit": "^8.0|^9.0|^10.0"
             },
             "type": "library",
@@ -4640,21 +4742,18 @@
                 "rain"
             ],
             "support": {
-                "source": "https://github.com/octobercms/library/tree/v4.1.18"
+                "source": "https://github.com/octobercms/library/tree/v4.2.3"
             },
-            "time": "2026-03-10T07:47:37+00:00"
+            "time": "2026-03-20T13:52:14+00:00"
         },
         {
             "name": "october/system",
-            "version": "v4.1.9",
+            "version": "v4.2.8",
             "dist": {
                 "type": "zip",
-                "url": "https://gateway.octobercms.com/composer/dist/october/system/october-system-v4.1.9-209608.zip",
-                "reference": "1489111d036003d748da46ac229273eaa4356df0",
-                "shasum": "861d2fdf5341e8588eca88ce6dee0aea50a6abfd"
-            },
-            "require": {
-                "composer/installers": "~1.0"
+                "url": "https://gateway.octobercms.com/composer/dist/october/system/october-system-v4.2.8-8ef664.zip",
+                "reference": "f0a46c230d013b341d625abd3c48e48fe6f3d91d",
+                "shasum": "cc9fed653a0d4c8721b0f613e5fef206b944dc36"
             },
             "type": "october-module",
             "authors": [
@@ -4674,19 +4773,16 @@
                 "october cms",
                 "system"
             ],
-            "time": "2026-01-25T23:03:30+00:00"
+            "time": "2026-03-27T09:31:17+00:00"
         },
         {
             "name": "october/tailor",
-            "version": "v4.1.9",
+            "version": "v4.2.8",
             "dist": {
                 "type": "zip",
-                "url": "https://gateway.octobercms.com/composer/dist/october/tailor/october-tailor-v4.1.9-3bcb86.zip",
-                "reference": "fe2ef3c2f97927907691095c238d0f4ee54cb6b3",
-                "shasum": "00e3da37ad29548f465af09fca446fbdda4c61a5"
-            },
-            "require": {
-                "composer/installers": "~1.0"
+                "url": "https://gateway.octobercms.com/composer/dist/october/tailor/october-tailor-v4.2.8-cd69d4.zip",
+                "reference": "f96f9425d638248dc0d3982891c64d9806b7a7d1",
+                "shasum": "88e18972c722026f673459ebfb7ac33d84cf2b3e"
             },
             "type": "october-module",
             "authors": [
@@ -4706,7 +4802,7 @@
                 "october cms",
                 "tailor"
             ],
-            "time": "2026-01-21T09:08:41+00:00"
+            "time": "2026-03-22T00:17:59+00:00"
         },
         {
             "name": "paragonie/constant_time_encoding",
@@ -5367,16 +5463,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.12.21",
+            "version": "v0.12.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "4821fab5b7cd8c49a673a9fd5754dc9162bb9e97"
+                "reference": "3be75d5b9244936dd4ac62ade2bfb004d13acf0f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/4821fab5b7cd8c49a673a9fd5754dc9162bb9e97",
-                "reference": "4821fab5b7cd8c49a673a9fd5754dc9162bb9e97",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/3be75d5b9244936dd4ac62ade2bfb004d13acf0f",
+                "reference": "3be75d5b9244936dd4ac62ade2bfb004d13acf0f",
                 "shasum": ""
             },
             "require": {
@@ -5440,9 +5536,9 @@
             ],
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
-                "source": "https://github.com/bobthecow/psysh/tree/v0.12.21"
+                "source": "https://github.com/bobthecow/psysh/tree/v0.12.22"
             },
-            "time": "2026-03-06T21:21:28+00:00"
+            "time": "2026-03-22T23:03:24+00:00"
         },
         {
             "name": "rainlab/forum-plugin",
@@ -5527,12 +5623,12 @@
         },
         {
             "name": "rainlab/user-plugin",
-            "version": "v3.3.2",
+            "version": "v3.3.3",
             "dist": {
                 "type": "zip",
-                "url": "https://gateway.octobercms.com/composer/dist/rainlab/user-plugin/rainlab-user-plugin-b044bb20bf64615b32b1384b35ed4f0fb3a50c7c-zip-002a18.zip",
-                "reference": "b044bb20bf64615b32b1384b35ed4f0fb3a50c7c",
-                "shasum": "8d6da4410a64f8a4dbc5633b81acd0c48fb06f83"
+                "url": "https://gateway.octobercms.com/composer/dist/rainlab/user-plugin/rainlab-user-plugin-db36657d58540015c1b25c4629a9ebb0394b88ed-zip-c239a8.zip",
+                "reference": "db36657d58540015c1b25c4629a9ebb0394b88ed",
+                "shasum": "cdbaa9e3289c84b6d811bec5038683595ee33f97"
             },
             "require": {
                 "bacon/bacon-qr-code": "^2.0",
@@ -5567,10 +5663,10 @@
                 "user"
             ],
             "support": {
-                "source": "https://github.com/rainlab/user-plugin/tree/v3.3.2",
+                "source": "https://github.com/rainlab/user-plugin/tree/v3.3.3",
                 "issues": "https://github.com/rainlab/user-plugin/issues"
             },
-            "time": "2026-02-19T20:46:50+00:00"
+            "time": "2026-03-15T01:25:46+00:00"
         },
         {
             "name": "rainlab/userplus-plugin",
@@ -6838,6 +6934,80 @@
                 }
             ],
             "time": "2026-01-29T09:40:50+00:00"
+        },
+        {
+            "name": "symfony/html-sanitizer",
+            "version": "v7.4.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/html-sanitizer.git",
+                "reference": "e4df2abd9391ce3263baa1aea9e993f6da74a3c7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/html-sanitizer/zipball/e4df2abd9391ce3263baa1aea9e993f6da74a3c7",
+                "reference": "e4df2abd9391ce3263baa1aea9e993f6da74a3c7",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "league/uri": "^6.5|^7.0",
+                "masterminds/html5": "^2.7.2",
+                "php": ">=8.2",
+                "symfony/deprecation-contracts": "^2.5|^3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\HtmlSanitizer\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Titouan Galopin",
+                    "email": "galopintitouan@gmail.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides an object-oriented API to sanitize untrusted HTML input for safe insertion into a document's DOM.",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "Purifier",
+                "html",
+                "sanitizer"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/html-sanitizer/tree/v7.4.7"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2026-03-06T13:15:18+00:00"
         },
         {
             "name": "symfony/http-foundation",
@@ -9010,16 +9180,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v3.23.0",
+            "version": "v3.24.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "a64dc5d2cc7d6cafb9347f6cd802d0d06d0351c9"
+                "reference": "a6769aefb305efef849dc25c9fd1653358c148f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/a64dc5d2cc7d6cafb9347f6cd802d0d06d0351c9",
-                "reference": "a64dc5d2cc7d6cafb9347f6cd802d0d06d0351c9",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/a6769aefb305efef849dc25c9fd1653358c148f0",
+                "reference": "a6769aefb305efef849dc25c9fd1653358c148f0",
                 "shasum": ""
             },
             "require": {
@@ -9029,7 +9199,8 @@
                 "symfony/polyfill-mbstring": "^1.3"
             },
             "require-dev": {
-                "phpstan/phpstan": "^2.0",
+                "php-cs-fixer/shim": "^3.0@stable",
+                "phpstan/phpstan": "^2.0@stable",
                 "psr/container": "^1.0|^2.0",
                 "symfony/phpunit-bridge": "^5.4.9|^6.4|^7.0"
             },
@@ -9073,7 +9244,7 @@
             ],
             "support": {
                 "issues": "https://github.com/twigphp/Twig/issues",
-                "source": "https://github.com/twigphp/Twig/tree/v3.23.0"
+                "source": "https://github.com/twigphp/Twig/tree/v3.24.0"
             },
             "funding": [
                 {
@@ -9085,7 +9256,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-01-23T21:00:41+00:00"
+            "time": "2026-03-17T21:31:11+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

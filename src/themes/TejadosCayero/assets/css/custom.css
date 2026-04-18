@@ -117,6 +117,7 @@ body {
 }
 
 /* 3. CARRUSEL INFERIOR */
+/*
 .carousel-full-clean {
     height: 700px;
     width: 100%;
@@ -127,7 +128,28 @@ body {
 .carousel-full-clean .carousel-item img {
     height: 700px;
     width: 100%;
-    object-fit: cover; /* Evita que la imagen se estire */
+    object-fit: contain;
+}
+*/
+
+.swiper {
+    width: 100%;
+    height: 600px; /* Altura del carrusel */
+    padding-bottom: 50px; /* Espacio para las bolitas de abajo */
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-trabajo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Llena el espacio sin deformar */
+    border-radius: 10px; /* Bordes redondeados para que quede más moderno */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 /* Estilos para los bloques de servicios Tectum, Uralita, etc */
@@ -260,6 +282,201 @@ body {
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
+}
+
+/* =========================================
+   WIDGET CHATBOT
+   ========================================= */
+
+/* Variables de color para fácil personalización */
+:root {
+    --chat-primary-color: #0d6efd; /* Azul por defecto de Bootstrap, cámbialo al de tu marca */
+    --chat-bg-color: #ffffff;
+    --chat-bot-bubble: #f1f3f4;
+    --chat-text-dark: #333333;
+    --chat-text-light: #ffffff;
+}
+
+/* Contenedor principal: fijo abajo a la derecha */
+#tfg-chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1050; /* Bootstrap modal z-index es 1050, así siempre estará encima */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Botón flotante */
+#chatbot-toggle-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--chat-primary-color);
+    color: var(--chat-text-light);
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    /* Forzamos que se mantenga a la derecha (útil en móviles) */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#chatbot-toggle-btn:hover {
+    transform: scale(1.05); /* Pequeño efecto al pasar el ratón */
+}
+
+/* Ventana del chat (Oculta por defecto) */
+#chatbot-window {
+    display: none; /* Se mostrará con JS cambiando a display: flex */
+    flex-direction: column;
+    width: 350px;
+    height: 500px;
+    background-color: var(--chat-bg-color);
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: absolute;
+    bottom: 80px; /* Para que quede por encima del botón */
+    right: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Cabecera del chat */
+.chatbot-header {
+    background-color: var(--chat-primary-color);
+    color: var(--chat-text-light);
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 2;
+}
+
+/* Área de los mensajes */
+.chatbot-messages-container {
+    flex-grow: 1; /* Ocupa todo el espacio disponible central */
+    padding: 20px;
+    overflow-y: auto; /* Scroll si hay muchos mensajes */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fafafa;
+}
+
+/* Estilo común de las burbujas */
+.chat-bubble {
+    max-width: 80%;
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    animation: fadeIn 0.3s ease-in-out; /* Animación de entrada */
+}
+
+/* Burbuja del Bot (A la izquierda) */
+.bot-message {
+    background-color: var(--chat-bot-bubble);
+    color: var(--chat-text-dark);
+    align-self: flex-start;
+    border-bottom-left-radius: 2px; /* Forma de bocadillo de chat */
+}
+
+/* Burbuja del Usuario (A la derecha, cuando hace clic en una opción) */
+.user-message {
+    background-color: var(--chat-primary-color);
+    color: var(--chat-text-light);
+    align-self: flex-end;
+    border-bottom-right-radius: 2px;
+}
+
+/* Área de opciones (botones a elegir) */
+.chatbot-options-container {
+    padding: 15px;
+    background-color: var(--chat-bg-color);
+    border-top: 1px solid #eeeeee;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    z-index: 2;
+}
+
+/* Estilo de los botones de opciones */
+.chatbot-option-btn {
+    background-color: transparent;
+    border: 1px solid var(--chat-primary-color);
+    color: var(--chat-primary-color);
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.chatbot-option-btn:hover {
+    background-color: var(--chat-primary-color);
+    color: var(--chat-text-light);
+}
+
+/* Pequeña animación para cuando aparecen los mensajes */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE: Adaptación para móviles */
+@media (max-width: 576px) {
+    #chatbot-window {
+        /* Ocupa casi toda la pantalla en móvil */
+        width: calc(100vw - 40px);
+        height: calc(100vh - 120px);
+        bottom: 70px;
+    }
+}
+
+/* =========================================
+   ESTILOS BOCADILLO DE BIENVENIDA
+   ========================================= */
+
+#chatbot-welcome-bubble {
+    position: absolute;
+    bottom: 80px; /* Justo encima del botón flotante */
+    right: 0;
+    width: 250px;
+    background-color: var(--chat-bg-color);
+    color: var(--chat-text-dark);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    font-size: 0.95rem;
+    
+    /* Oculto por defecto y preparado para la animación */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Triángulo para simular un bocadillo de cómic */
+#chatbot-welcome-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Se posiciona debajo del bocadillo */
+    right: 25px; /* Alineado con el botón */
+    border-width: 10px 10px 0;
+    border-style: solid;
+    border-color: var(--chat-bg-color) transparent;
+}
+
+/* Clase que usará JS para hacerlo visible */
+#chatbot-welcome-bubble.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 /* Footer */

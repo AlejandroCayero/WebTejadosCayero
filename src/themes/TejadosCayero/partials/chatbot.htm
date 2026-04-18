@@ -1,0 +1,43 @@
+
+<!-- Contenedor principal del Chatbot -->
+<!-- Nota TFG: Usamos un contenedor principal para aislar nuestro widget del resto de la web -->
+<div id="tfg-chatbot-container">
+    
+    <!-- Ventana del Chat (Por defecto oculta vía CSS) -->
+    <div id="chatbot-window">
+        <!-- Cabecera del chat -->
+        <div class="chatbot-header">
+            <div>
+                <h5 style="margin:0; font-weight:bold;">Asistente Virtual</h5>
+                <small>de Tejados Cayero</small>
+            </div>
+        </div>
+
+        <!-- Área de mensajes (burbujas) -->
+        <div id="chatbot-messages" class="chatbot-messages-container">
+            <!-- Los mensajes se inyectarán aquí con JavaScript -->
+        </div>
+
+        <!-- Área de controles (botones de decisión) -->
+        <div id="chatbot-options" class="chatbot-options-container">
+            <!-- Los botones se inyectarán aquí con JavaScript -->
+        </div>
+    </div>
+
+    <!-- Bocadillo de bienvenida (oculto por defecto) -->
+    <div id="chatbot-welcome-bubble">
+    <p>¿Necesitas ayuda con tu tejado?</p>
+    </div>
+    <!-- Botón flotante para abrir/cerrar el chat -->
+    <button id="chatbot-toggle-btn" aria-label="Alternar chat">
+        <!-- Icono de Mensaje (SVG) -->
+        <svg id="icon-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+        <!-- Icono de Cerrar (SVG oculto por defecto) -->
+        <svg id="icon-close" style="display: none;" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+    </button>
+</div>

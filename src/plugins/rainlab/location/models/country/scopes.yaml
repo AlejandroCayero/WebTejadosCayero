@@ -1,7 +1,0 @@
-scopes:
-    enabled:
-        label: Enabled
-        type: switch
-        conditions:
-            - is_enabled = '1'
-            - is_enabled = '0'

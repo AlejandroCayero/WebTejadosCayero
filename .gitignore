@@ -35,3 +35,8 @@ Homestead.json
 .phpactor.json
 auth.json
 mysql_data/
+
+/src/modules/
+/src/plugins/rainlab/
+src/vendor/
+src/storage/
